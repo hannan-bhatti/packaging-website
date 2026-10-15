@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foldline — Custom packaging, made simple</title>
+  <meta name="description" content="Custom boxes, mailers and bags for growing brands. Pick a style, add your design, and get it delivered in as little as 10 days." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23141414'/><path d='M9 12l7-4 7 4v8l-7 4-7-4z' fill='none' stroke='%23C98F55' stroke-width='2' stroke-linejoin='round'/><path d='M9 12l7 4 7-4M16 16v8' fill='none' stroke='%23C98F55' stroke-width='2' stroke-linejoin='round'/></svg>" />
+</head>
+<body>
+  <!-- ========== NAV ========== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="logo" aria-label="Foldline home">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M9 12l7-4 7 4v8l-7 4-7-4z" fill="none" stroke="#C98F55" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l7 4 7-4M16 16v8" fill="none" stroke="#C98F55" stroke-width="2" stroke-linejoin="round"/></svg>
+        <span>foldline</span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Main">
+        <a href="#products">Products</a>
+        <a href="#process">How it works</a>
+        <a href="#quote">Pricing</a>
+        <a href="#eco">Sustainability</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="#quote" class="btn btn--dark btn--sm">Get a quote</a>
+        <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ========== HERO (scroll story) ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__sticky">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <div class="hero__intro" id="heroIntro">
+              <span class="eyebrow"><span class="dot"></span> Custom packaging for growing brands</span>
+              <h1 class="hero__title">Packaging that <em>unfolds</em> your brand.</h1>
+              <p class="hero__lead">Boxes, mailers and bags made to your size and design. No minimum headaches, no design degree needed — just great packaging, delivered fast.</p>
+              <div class="hero__ctas">
+                <a href="#quote" class="btn btn--dark">Get an instant quote <span class="arrow">→</span></a>
+                <a href="#products" class="btn btn--ghost">Browse products</a>
+              </div>
+              <div class="hero__meta">
+                <div><strong>From 100</strong><span>units</span></div>
+                <div><strong>10 days</strong><span>delivery</span></div>
+                <div><strong>Free</strong><span>3D proof</span></div>
+              </div>
+            </div>
+
+            <ol class="hero__steps" id="heroSteps" aria-label="How your box comes together">
+              <li data-step="0">
+                <span class="hero__step-num">01</span>
+                <div>
+                  <h3>Design it</h3>
+                  <p>Every box starts as a flat sheet. Pick a style and drop in your artwork.</p>
+                </div>
+              </li>
+              <li data-step="1">
+                <span class="hero__step-num">02</span>
+                <div>
+                  <h3>Fold it</h3>
+                  <p>We cut and crease it to your exact size — no wasted space, no extra filler.</p>
+                </div>
+              </li>
+              <li data-step="2">
+                <span class="hero__step-num">03</span>
+                <div>
+                  <h3>Close it</h3>
+                  <p>Sturdy walls and a snug tuck lid keep your products safe in transit.</p>
+                </div>
+              </li>
+              <li data-step="3">
+                <span class="hero__step-num">04</span>
+                <div>
+                  <h3>Ship it</h3>
+                  <p>Your branded box arrives at your door, ready to impress your customers.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="hero__stage" id="heroStage" aria-hidden="true">
+            <div class="stage">
+              <div class="stage__shadow" id="boxShadow"></div>
+              <div class="box3d" id="box3d">
+                <div class="panel panel--base">
+                  <i class="face in"><span class="dieline-label">BASE</span></i><i class="face out"></i>
+                  <div class="panel panel--front"><i class="face in"></i><i class="face out"><span class="side-mark">THIS SIDE UP ↑</span></i></div>
+                  <div class="panel panel--left"><i class="face in"></i><i class="face out"></i></div>
+                  <div class="panel panel--right"><i class="face in"></i><i class="face out"></i></div>
+                  <div class="panel panel--back">
+                    <i class="face in"></i><i class="face out"></i>
+                    <div class="panel panel--lid">
+                      <i class="face in"><span class="dieline-label">LID</span></i>
+                      <i class="face out face--brand"><span class="brand-mark">foldline<small>made for you</small></span></i>
+                      <div class="panel panel--tuck"><i class="face in"></i><i class="face out"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="stage__label" id="stageLabel">
+                <span class="tag" id="stageTag">Flat dieline · 240 × 170 × 110 mm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__progress" aria-hidden="true">
+          <span class="hero__progress-bar" id="heroProgress"></span>
+        </div>
+        <div class="scroll-hint" id="scrollHint" aria-hidden="true">
+          <span class="mouse"><span></span></span>
+          Scroll to fold
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LOGOS ========== -->
+    <section class="logos" aria-label="Trusted by">
+      <p class="logos__title">Trusted by 2,000+ brands, from kitchen-table startups to global retailers</p>
+      <div class="marquee">
+        <div class="marquee__track">
+          <span>Northwind</span><span>Oak &amp; Ember</span><span>BLOOMLY</span><span>kinfolk.co</span><span>Saltwater</span><span>MERIDIAN</span><span>Pebble</span><span>Hearth Coffee</span><span>Lumen</span><span>VERDE</span>
+          <span>Northwind</span><span>Oak &amp; Ember</span><span>BLOOMLY</span><span>kinfolk.co</span><span>Saltwater</span><span>MERIDIAN</span><span>Pebble</span><span>Hearth Coffee</span><span>Lumen</span><span>VERDE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRODUCTS ========== -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Products</span>
+          <h2>Pick a style. <em>We'll handle the rest.</em></h2>
+          <p>Six proven formats that cover almost everything you'll ever need to sell, ship or gift.</p>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Filter products">
+          <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="chip" data-filter="ship" role="tab" aria-selected="false">Shipping</button>
+          <button class="chip" data-filter="retail" role="tab" aria-selected="false">Retail</button>
+          <button class="chip" data-filter="gift" role="tab" aria-selected="false">Gifting</button>
+          <button class="chip" data-filter="eco" role="tab" aria-selected="false">Plastic-free</button>
+        </div>
+
+        <div class="products" id="productGrid"><!-- rendered by script.js --></div>
+      </div>
+    </section>
+
+    <!-- ========== PROCESS ========== -->
+    <section class="section section--dark" id="process">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow eyebrow--light">How it works</span>
+          <h2>From idea to doorstep <em>in four easy steps.</em></h2>
+        </div>
+        <div class="steps">
+          <article class="step reveal">
+            <span class="step__num">01</span>
+            <div class="step__icon"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
+            <h3>Choose your box</h3>
+            <p>Select a style and enter your size. Not sure? Our team will recommend one for free.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step__num">02</span>
+            <div class="step__icon"><svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg></div>
+            <h3>Add your design</h3>
+            <p>Upload your logo or artwork. We'll check every file and fix small issues for you.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step__num">03</span>
+            <div class="step__icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <h3>Approve your proof</h3>
+            <p>See a free 3D preview of your box within 24 hours. Change anything until it's perfect.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step__num">04</span>
+            <div class="step__icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+            <h3>Get it delivered</h3>
+            <p>Production starts right away. Your boxes ship in as little as 10 business days.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== QUOTE BUILDER ========== -->
+    <section class="section" id="quote">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Instant pricing</span>
+          <h2>Build your box. <em>See your price.</em></h2>
+          <p>No forms, no waiting. Adjust anything below and your price updates instantly.</p>
+        </div>
+
+        <div class="builder reveal">
+          <form class="builder__controls" id="builderForm" onsubmit="return false">
+            <fieldset class="field">
+              <legend>Box style</legend>
+              <div class="segmented" id="typeGroup">
+                <!-- rendered by script.js -->
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend>Size <span class="unit-toggle" role="group" aria-label="Units"><button type="button" class="is-active" data-unit="cm">cm</button><button type="button" data-unit="in">in</button></span></legend>
+              <div class="sliders">
+                <label class="slider">
+                  <span>Length <output id="outL"></output></span>
+                  <input type="range" id="dimL" min="5" max="60" value="24" />
+                </label>
+                <label class="slider">
+                  <span>Width <output id="outW"></output></span>
+                  <input type="range" id="dimW" min="5" max="60" value="17" />
+                </label>
+                <label class="slider">
+                  <span>Height <output id="outH"></output></span>
+                  <input type="range" id="dimH" min="2" max="50" value="11" />
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend>Quantity</legend>
+              <div class="qty">
+                <input type="range" id="qty" min="0" max="7" step="1" value="2" aria-label="Quantity" />
+                <div class="qty__ticks" id="qtyTicks"></div>
+              </div>
+            </fieldset>
+
+            <div class="field-row">
+              <fieldset class="field">
+                <legend>Material</legend>
+                <div class="swatches" id="materialGroup">
+                  <label class="swatch"><input type="radio" name="material" value="kraft" checked /><span style="--sw:#C99A66"></span>Kraft</label>
+                  <label class="swatch"><input type="radio" name="material" value="white" /><span style="--sw:#F4F2EE"></span>White</label>
+                  <label class="swatch"><input type="radio" name="material" value="black" /><span style="--sw:#2A2A2A"></span>Black</label>
+                </div>
+              </fieldset>
+              <fieldset class="field">
+                <legend>Printing</legend>
+                <select id="print" class="select">
+                  <option value="none">No print</option>
+                  <option value="one" selected>1-colour logo</option>
+                  <option value="full">Full colour outside</option>
+                  <option value="both">Full colour in &amp; out</option>
+                </select>
+              </fieldset>
+            </div>
+
+            <fieldset class="field">
+              <legend>Finish</legend>
+              <div class="pills" id="finishGroup">
+                <label><input type="radio" name="finish" value="matte" checked /><span>Matte</span></label>
+                <label><input type="radio" name="finish" value="gloss" /><span>Gloss</span></label>
+                <label><input type="radio" name="finish" value="soft" /><span>Soft-touch</span></label>
+              </div>
+            </fieldset>
+          </form>
+
+          <aside class="builder__summary">
+            <div class="preview" id="preview" title="Drag to rotate">
+              <div class="preview__scene">
+                <div class="cube" id="cube">
+                  <div class="cube__face cube__face--front"></div>
+                  <div class="cube__face cube__face--back"></div>
+                  <div class="cube__face cube__face--left"></div>
+                  <div class="cube__face cube__face--right"></div>
+                  <div class="cube__face cube__face--top"><span class="cube__logo" id="cubeLogo">foldline</span></div>
+                  <div class="cube__face cube__face--bottom"></div>
+                </div>
+              </div>
+              <span class="preview__hint">Drag to rotate</span>
+            </div>
+
+            <div class="summary">
+              <div class="summary__price">
+                <span class="summary__label">Price per box</span>
+                <strong id="unitPrice">$0.00</strong>
+              </div>
+              <dl class="summary__list">
+                <div><dt>Quantity</dt><dd id="sumQty">—</dd></div>
+                <div><dt>Box size</dt><dd id="sumSize">—</dd></div>
+                <div><dt>Estimated delivery</dt><dd id="sumEta">—</dd></div>
+                <div class="summary__total"><dt>Total</dt><dd id="totalPrice">—</dd></div>
+              </dl>
+              <p class="summary__save" id="sumSave"></p>
+              <button class="btn btn--dark btn--block" id="openQuote">Request this quote <span class="arrow">→</span></button>
+              <p class="summary__note">Prices include setup and a free 3D proof. Shipping calculated at checkout.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SUSTAINABILITY ========== -->
+    <section class="section section--tint" id="eco">
+      <div class="container eco">
+        <div class="eco__media reveal">
+          <img src="assets/images/eco.jpg" alt="A stack of flattened recycled kraft cardboard with a green sprig" loading="lazy" />
+          <div class="eco__badge">
+            <svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            FSC® certified paper
+          </div>
+        </div>
+        <div class="eco__copy">
+          <span class="eyebrow reveal">Sustainability</span>
+          <h2 class="reveal">Better for your brand. <em>Better for the planet.</em></h2>
+          <p class="reveal">We use recycled paper, water-based inks and right-sized boxes, so you ship less air and less waste. Every box can go straight into the recycling bin.</p>
+          <div class="stats">
+            <div class="stat reveal"><strong><span data-count="92">0</span>%</strong><span>recycled fibres on average</span></div>
+            <div class="stat reveal"><strong><span data-count="100">0</span>%</strong><span>plastic-free options</span></div>
+            <div class="stat reveal"><strong><span data-count="38">0</span>%</strong><span>less void fill with custom sizes</span></div>
+            <div class="stat reveal"><strong><span data-count="1.4" data-decimals="1">0</span>M</strong><span>trees planted with our partners</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section__head section__head--row reveal">
+          <div>
+            <span class="eyebrow">Reviews</span>
+            <h2>Loved by brands <em>big and small.</em></h2>
+          </div>
+          <div class="slider-nav">
+            <button class="icon-btn" id="prevReview" aria-label="Previous review">←</button>
+            <button class="icon-btn" id="nextReview" aria-label="Next review">→</button>
+          </div>
+        </div>
+        <div class="reviews reveal">
+          <div class="reviews__track" id="reviewTrack"><!-- rendered by script.js --></div>
+        </div>
+        <div class="dots" id="reviewDots"></div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="section section--tint" id="faq">
+      <div class="container faq">
+        <div class="faq__head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions? <em>We've got answers.</em></h2>
+          <p>Can't find what you need? <a href="#contact" class="link" data-open-quote>Talk to a packaging expert</a> — we usually reply within an hour.</p>
+        </div>
+        <div class="accordion reveal" id="accordion">
+          <details open>
+            <summary>What is the minimum order?</summary>
+            <p>Most styles start at just 100 units. That makes it easy to test a new product or launch without filling a warehouse.</p>
+          </details>
+          <details>
+            <summary>How long does it take?</summary>
+            <p>Standard orders ship in 10 business days after you approve your proof. Need it sooner? Rush production in 5 days is available on most styles.</p>
+          </details>
+          <details>
+            <summary>Can I get a sample first?</summary>
+            <p>Yes. Order a plain sample in your exact size for $15, or a printed sample for $49. Both amounts are credited back when you place your full order.</p>
+          </details>
+          <details>
+            <summary>I don't have a design. Can you help?</summary>
+            <p>Absolutely. Send us your logo and colours and our in-house designers will create a layout for you, free on orders over 500 units.</p>
+          </details>
+          <details>
+            <summary>Is your packaging recyclable?</summary>
+            <p>All our paper and cardboard packaging is curbside recyclable. We also offer compostable mailers and plastic-free tape.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta" id="contact">
+      <div class="container cta__inner reveal">
+        <h2>Ready to make something <em>people want to unbox?</em></h2>
+        <p>Get your free 3D proof in 24 hours. No commitment, no credit card.</p>
+        <div class="cta__actions">
+          <button class="btn btn--light" data-open-quote>Start your project <span class="arrow">→</span></button>
+          <a href="mailto:hello@foldline.co" class="btn btn--outline-light">hello@foldline.co</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#top" class="logo">
+          <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M9 12l7-4 7 4v8l-7 4-7-4z" fill="none" stroke="#C98F55" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l7 4 7-4M16 16v8" fill="none" stroke="#C98F55" stroke-width="2" stroke-linejoin="round"/></svg>
+          <span>foldline</span>
+        </a>
+        <p>Custom packaging, made simple. Designed for brands that care about the details.</p>
+        <form class="newsletter" id="newsletter" novalidate>
+          <input type="email" placeholder="Your email" aria-label="Email address" required />
+          <button class="btn btn--dark btn--sm" type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <a href="#products">Mailer boxes</a>
+        <a href="#products">Shipping boxes</a>
+        <a href="#products">Rigid gift boxes</a>
+        <a href="#products">Paper bags</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#process">How it works</a>
+        <a href="#eco">Sustainability</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="#faq">FAQ</a>
+        <a href="#quote">Pricing</a>
+        <a href="#faq">Samples</a>
+        <a href="#faq">Shipping</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Foldline Packaging Co.</span>
+      <span>Made with recycled pixels ♻</span>
+    </div>
+  </footer>
+
+  <!-- ========== MODALS ========== -->
+  <div class="modal" id="productModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel modal__panel--wide">
+      <button class="modal__close" data-close aria-label="Close">✕</button>
+      <div class="pm">
+        <div class="pm__media"><img id="pmImg" alt="" /></div>
+        <div class="pm__body">
+          <span class="eyebrow" id="pmTag"></span>
+          <h3 id="pmTitle"></h3>
+          <p id="pmDesc"></p>
+          <ul class="pm__list" id="pmList"></ul>
+          <div class="pm__price"><span>From</span> <strong id="pmPrice"></strong> <span>/ unit</span></div>
+          <button class="btn btn--dark btn--block" id="pmUse">Customise this box <span class="arrow">→</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="quoteModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="qmTitle">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel">
+      <button class="modal__close" data-close aria-label="Close">✕</button>
+      <div class="qm" id="qmForm">
+        <h3 id="qmTitle">Let's make your boxes</h3>
+        <p class="qm__summary" id="qmSummary"></p>
+        <form id="quoteForm" novalidate>
+          <label class="input"><span>Your name</span><input name="name" type="text" autocomplete="name" required /><small>Please enter your name</small></label>
+          <label class="input"><span>Work email</span><input name="email" type="email" autocomplete="email" required /><small>Please enter a valid email</small></label>
+          <label class="input"><span>Company <em>(optional)</em></span><input name="company" type="text" autocomplete="organization" /></label>
+          <label class="input"><span>Anything else we should know? <em>(optional)</em></span><textarea name="notes" rows="3"></textarea></label>
+          <button class="btn btn--dark btn--block" type="submit">Send my request <span class="arrow">→</span></button>
+        </form>
+      </div>
+      <div class="qm qm--done" id="qmDone" hidden>
+        <div class="check"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-15"/></svg></div>
+        <h3>Request received!</h3>
+        <p>Thanks — a packaging expert will email you a free 3D proof within 24 hours.</p>
+        <button class="btn btn--dark" data-close>Back to site</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
