@@ -130,9 +130,10 @@
 
   function fitStage() {
     const r = stageWrap.getBoundingClientRect();
-    const mobile = window.innerWidth <= 900;
-    const s = Math.min(r.width / 600, r.height / 660, mobile ? 0.78 : 1.05);
-    stageEl.style.setProperty("--stage-scale", Math.max(0.4, s).toFixed(3));
+    const w = window.innerWidth;
+    const maxScale = w <= 420 ? 0.6 : w <= 900 ? 0.75 : 1.05;
+    const s = Math.min(r.width / 580, r.height / 640, maxScale);
+    stageEl.style.setProperty("--stage-scale", Math.max(0.38, s).toFixed(3));
   }
 
   function renderHero() {
@@ -150,7 +151,8 @@
 
     const tilt = lerp(0, 58, pTilt) - pShip * 6;
     const spin = lerp(0, -34, pTilt) + pShip * -360;
-    const offY = lerp(102, 0, ease(range(p, 0.10, 0.48))) + pShip * 10;
+    const isMobile = window.innerWidth <= 900;
+    const offY = (lerp(102, 0, ease(range(p, 0.10, 0.48))) + pShip * 10) * (isMobile ? 0.6 : 1);
     const lift = Math.sin(pShip * Math.PI) * 60 + pShip * 18;
     const scale = lerp(0.92, 1, pTilt) + pShip * 0.08;
 
@@ -193,6 +195,9 @@
 
     progressBar.style.transform = `scaleX(${p.toFixed(4)})`;
     scrollHint.style.opacity = p > 0.015 ? 0 : 1;
+    if (isMobile && p < 0.02) {
+      stageTag.style.opacity = 0;
+    }
   }
 
   // Click a step to jump to it
